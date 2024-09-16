@@ -1,0 +1,151 @@
+.promo {
+  margin-top: 36px;
+  margin-bottom: 96px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    @include tablet {
+      gap: 24px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__banner {
+    border-radius: 1.8vw;
+    box-shadow: 0 6px 30px 4px rgba(32, 32, 32, 0.1);
+  }
+
+  @include laptop {
+    margin-bottom: 72px;
+  }
+
+  @include tablet {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+}
+.container {
+}
+.visually-hidden {
+}
+.promo-content {
+  max-width: 1080px;
+
+  &__title {
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #333;
+
+    @include tablet {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include tablet {
+      gap: 12px;
+    }
+  }
+
+  &__date {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #939393;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #333;
+
+    &:first-child {
+      padding-right: 40px;
+    }
+
+    @include tablet {
+      padding-right: 18px;
+      font-size: 16px;
+
+      &:first-child { 
+       padding-right: 5px;
+      }
+    }
+
+    @include laptop {
+      &:nth-child(2) {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.menu-bottom {
+  display: none;
+
+  padding: 13px $container-mobile-padding 11px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -3px 13px 0 rgba(146, 146, 146, 0.25);
+  background: #fff;
+  z-index: 10;
+
+  @include tablet {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    &--active {
+
+      .menu-bottom__icon path {
+        fill: #e11c4b;
+      }
+
+      .menu-bottom__text {
+        color: #e11c4b;
+      }
+    }
+  }
+
+  &__icon {
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #333;
+  }
+}
+

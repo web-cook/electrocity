@@ -1,0 +1,206 @@
+.footer {
+  background-color: var(--footer-bg);
+
+  &__container {
+    padding-top: 36px;
+    padding-bottom: 18px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 27px;
+
+    @include laptop {
+      grid-template-rows: repeat(3, auto);
+      row-gap: 24px;
+      grid-auto-flow: column;
+    }
+
+    @include tablet {
+      padding-bottom: calc(18px + 64px);
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      row-gap: 18px;
+    }
+  }
+}
+.container {
+}
+.footer-menu {
+  display: flex;
+  gap: 62px;
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  @include laptop {
+    gap: 24px;
+  }
+}
+.footer-contacts {
+  display: flex;
+  justify-content: flex-end;
+  gap: 62px;
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__link--phone {
+    padding-left: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 19px;
+      background-image: url("../img/icons/tel.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__link--mail {
+    padding-left: 34px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 18px;
+      background-image: url("../img/icons/mail.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include tablet {
+        width: 18px;
+        height: 12px;
+      }
+    }
+
+    @include tablet {
+      padding-left: 24px;
+    }
+  }
+
+  @include laptop {
+    grid-row: 2;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+.footer-copyright {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #8d8d8d;
+
+  @include tablet {
+    margin-top: 6px;
+    grid-row: 4;
+  }
+}
+.footer-socials {
+  position: relative;
+  top: -10px;
+  justify-self: end;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #8d8d8d;
+    transition: var(--transition-default);
+
+    &--vk {
+      &:hover {
+        svg path {
+          fill: #3279fb;
+        }
+      }
+    }
+
+    &--youtube {
+      &:hover {
+        svg path {
+          fill: #eb3211;
+        }
+      }
+    }
+
+    &--telegram {
+      &:hover {
+        svg path {
+          fill: #4490c0;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 3px #8D8D8D;
+    }
+
+    @include tablet {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  @include laptop {
+    position: absolute;
+    top: unset;
+  }
+
+  @include tablet {
+    margin-top: -6px;
+    position: relative;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+  }
+}

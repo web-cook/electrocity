@@ -1,0 +1,19 @@
+:root {
+  --font-main: 'Roboto', sans-serif;
+
+  --page-bg: #FFFFFF;
+  --footer-bg: #f4f4f4;
+  --text-color-main: #333333;
+  --text-color-second: #939393;
+  --text-color-copy: #8D8D8D;
+
+  --transition-default: 0.3s all;
+}
+
+$container-laptop: 1200px;
+$container-tablet: 768px;
+$container-mobile: 320px;
+
+$container-laptop-padding: 25px;
+$container-tablet-padding: 20px;
+$container-mobile-padding: 10px;
